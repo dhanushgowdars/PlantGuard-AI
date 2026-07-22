@@ -19,7 +19,7 @@ const DiseaseEncyclopedia = () => {
       setLoading(true); 
       setError(null); 
       try {
-        const response = await axios.get('http://localhost:5000/diseases'); 
+        const response = await axios.get('http://http://localhost:5000/diseases/diseases'); 
         if (Array.isArray(response.data)) {
           setDiseases(response.data);
           const uniqueCategories = [...new Set(response.data.map(d => d.category || 'Unknown'))];
